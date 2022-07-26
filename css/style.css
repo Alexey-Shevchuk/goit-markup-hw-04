@@ -1,0 +1,408 @@
+:root {
+    /* основний колір тексту */
+    --primary-text-color: #757575;
+    /* колір ссилок ховер */
+    --accent-color: #2196f3;
+    /* другорядний колір тексту */
+    --title-text-color: #212121;
+    /* колір тексту заголовка в Герої */
+    --order-title-text-color: #fff;
+    /* фон сторінки вебсайту */
+    --primary-bg-color: #fff;
+    /* другорядний фон сторінки(футер та замовлення послу) */
+    --footer-bg-color: #2f303a;
+    /* колір контактів в футері */
+    --footer-contacts-color: rgba(255, 255, 255, 0.6);
+    /* колір лого "студіо" в хедері */
+    --logo-studio-header-color: #000;
+    /* колір фону ""Наша команда */
+    --secondary-bg-color: #f5f4fa;
+    /* фон кнопки в hero-btn */
+    --background-color-hero-btn: #188CE8;
+    /* колір бордерів */
+    --border-color: #ECECEC;
+    /* колір бордеру-портфоліо */
+    --border-portfolio: #eeeeee;
+
+    --main-margin: 30px;
+    --secondary-margin: 50px;
+    --small-margin: 10px;
+    --portfolio-address-margin: 20px;
+    
+}
+
+
+body {
+    font-family: "Roboto", sans-serif;
+    letter-spacing: 0.03em;
+    color: var(--primary-text-color);
+    background-color: var(--primary-bg-color);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+ul {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+}
+.container {
+    width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+/*====скидаємо загальний стиль тексту сторінки==== */
+.link {
+text-decoration: none;
+}
+
+/* ====убираємо впорядкування списків===== */
+.list {
+    list-style: none;
+}
+
+.link:hover,
+.link:focus {
+    color: var(--accent-color);
+}
+
+/* =======Шапка========== */
+.header {
+    border-bottom: 1px solid var(--border-color);
+  }
+  .header-container {
+  display: flex;
+  align-items: center;
+}
+  
+/* ======Логотип======== */
+.logo {
+    font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        font-size: 26px;
+        line-height: 1.19;
+        color: var(--accent-color);
+}
+
+.header-studio {
+    color: var(--logo-studio-header-color);
+}
+
+.footer-studio {
+    color: var(--primary-bg-color);
+}
+/* =====навігація сайту і контакти в шапці====  */
+
+.navigation {
+    margin-left: 93px;
+  }
+
+  .site-nav {
+    display: flex;
+    align-items: center;
+  }
+  .contacts {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+  }
+  .site-nav-item:not(:last-child),
+.contact-item:not(:last-child) {
+  margin-right: var(--secondary-margin);
+}
+
+.site-nav-link,
+.contact-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+
+.site-nav-link {
+    color: var(--title-text-color);
+}
+.site-nav-link.current {
+    color: var(--accent-color);
+  }
+  
+
+.contact-link {
+    color: var(--primary-text-color);
+}
+
+/* ======Головна сторінка(HERO)======= */
+.hero {
+    background-color: var(--footer-bg-color);
+    margin: 0 auto;
+    padding-top: 200px;
+    padding-bottom: 200px;
+}
+.hero-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.hero-title {
+    margin: 0 auto;
+
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    max-width: 696px;
+
+    color: var(--order-title-text-color);
+}
+
+.hero-btn {
+    width: 200px;
+  height: var(--secondary-margin);
+  margin-top: var(--main-margin);
+
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+
+    color: var(--primary-bg-color);
+    background-color: var(--accent-color);
+
+    border-color: transparent;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+  
+
+    cursor: pointer;
+}
+.hero-btn:hover,
+.hero-btn:focus {
+    color: var(--accent-color);
+    background-color: var(--primary-bg-color);
+}
+
+/*=========== загальний стиль в секціях ======*/
+.section-title,
+.feature-title,
+.member-title {
+    color: var(--title-text-color);
+}
+.section-title,
+.member-title,
+.member-desc {
+    text-align: center;
+}
+.section-title {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+}
+/* секція - особливості */
+.features-section {
+    padding-bottom: 0px;
+  }
+  .features {
+    display: flex;
+    margin-left: calc(-1 * var(--main-margin));
+  }
+  .feature-item {
+    flex-basis: calc(100% / 4 - var(--main-margin));
+    margin-left: var(--main-margin);
+  }  
+.feature-title {
+    margin-bottom: var(--small-margin);
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+}
+
+.feature-desc {
+    font-size: 14px;
+    line-height: 1.71;
+}
+/* секція - робота */
+.works {
+    display: flex;
+    margin-left: calc(-1 * var(--main-margin));
+  }
+  
+  .work-item {
+    flex-basis: calc(100% / 3 - var(--main-margin));
+    margin-left: var(--main-margin);
+  }
+/* секція - команда */
+.team {
+    background-color: var(--secondary-bg-color);
+}
+.members {
+    display: flex;
+    margin-left: calc(-1 * var(--main-margin));
+  }
+  .member-item {
+    flex-basis: calc(100% / 4 - var(--main-margin));
+    margin-left: var(--main-margin);
+  
+    background-color: var(--primary-bg-color);
+
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+     0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  }
+
+  
+.member-content {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+.member-title,
+.member-desc {
+    font-size: 16px;
+    line-height: 1.19;
+}
+
+.member-title {
+    margin-bottom: var(--small-margin);
+    font-weight: 500;
+}
+
+
+
+
+
+/* =========підвал сайту======= */
+
+footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    background-color: var(--footer-bg-color);
+}
+.address {
+  margin-top: var(--portfolio-address-margin);
+}
+.address-list {
+    margin-bottom: -9px;
+
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+}
+.address-item {
+  font-size: 14px;
+  margin-bottom: 9px;
+}
+
+.address-map {
+    color: var(--primary-bg-color);
+}
+
+.address-link {
+    color: var(--footer-contacts-color);
+}
+
+/*=======Сторінка - Портфоліо======== */
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: var(--secondary-margin);
+  }
+
+  .filter-item:not(:first-child) {
+    margin-left: 8px;
+  }
+.filter-btn {
+    padding: 6px 22px;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    letter-spacing: 0.03em;
+  
+    color: var(--title-text-color);
+    background-color: var(--secondary-bg-color);
+
+    border-color: transparent;
+    border-radius: 4px;
+  
+    cursor: pointer;
+  }
+  
+  .filter-btn:hover,
+  .filter-btn:focus {
+    color: var(--primary-bg-color);
+    background-color: var(--accent-color);
+}
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+  
+    margin-top: calc(-1 * var(--main-margin));
+    margin-left: calc(-1 * var(--main-margin));
+  }
+  .project-item {
+    flex-basis: calc(100% / 3 - var(--main-margin));
+    margin-top: var(--main-margin);
+    margin-left: var(--main-margin);
+  }
+  .project-content {
+    padding: 20px 24px;
+    border-right: 1px solid var(--border-portfolio);
+    border-left: 1px solid var(--border-portfolio);
+    border-bottom: 1px solid var(--border-portfolio);
+  }
+  .project-title {
+    margin-bottom: 4px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+  
+    color: var(--title-text-color);
+  }
+  
+  .project-desc {
+    font-size: 16px;
+    line-height: 1.87;
+  
+    color: var(--primary-text-color);
+  }
+  
+  
+  /* .active {
+    background-color: var(--accent-color) !important;
+    color: var(--order-title-text-color) !important;
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+          0px 2px 2px rgba(0, 0, 0, 0.12);
+  } */
